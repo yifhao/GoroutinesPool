@@ -94,7 +94,6 @@ func (executor *GoroutinesPoolExecutor) shutdown() {
 	close(executor.work)
 }
 
-
 func newGoroutinesPoolExecutor(goroutineNums int32, channelSize int32, goroutineALiveSecond int32) (*GoroutinesPoolExecutor, error) {
 	if goroutineNums <= 0 {
 		return nil, errors.New("go routineNums should larger than 0")
