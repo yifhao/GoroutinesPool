@@ -5,13 +5,6 @@ import (
 	"time"
 )
 
-type Task interface {
-	Run()
-}
-
-//type FutureTask struct {
-//
-//}
 type ExecutorService interface {
 	run(runnable func())
 	shutdown(waitSecond int32) bool
